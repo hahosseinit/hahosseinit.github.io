@@ -228,9 +228,10 @@ body {
 
 .grid-container {
     position: absolute;
+    margin: 70px 0 40px;
     top: 0;
-    right: 30px;
-    width: 500px;
+    right: 0px;
+    width: 900px;
     height: 100%;
     background: transparent;
     transition: 3s;
@@ -242,14 +243,13 @@ body {
     width: 80%; /* Adjust as needed */
     height: 80%; /* Adjust as needed */
     overflow: auto; /* Enable scrolling */
-    border: 1px solid #ddd;
     padding: 16px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
     grid-template-columns: auto auto auto;
     gap: 16px;
     padding: 16px;
