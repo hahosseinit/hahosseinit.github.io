@@ -27,10 +27,23 @@ body {
 }
 
 .logo {
+    position: relative;
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
 }
 
 .navbar a {
@@ -49,7 +62,11 @@ body {
 
 .home {
     height: 100vh;
-    background: url('me.jpeg') no-repeat;
+    /* background: url('me.jpeg') no-repeat; */
+    background: linear-gradient(to right, rgb(0 0 0), rgb(255 255 255 / 0%)), url(me.jpeg) no-repeat;
+    background-position: right top;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -174,4 +191,27 @@ body {
 
 .home-sci a:hover::before {
     width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: #081b29;
+    opacity: .8;
+}
+
+
+/* KEYFRAME */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
 }
