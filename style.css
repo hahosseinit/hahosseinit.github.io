@@ -26,6 +26,11 @@ body {
     z-index: 100;
 }
 
+.mid-txt {
+    text-decoration: none;
+    color: #00abf0;
+}
+
 .logo {
     position: relative;
     font-size: 25px;
